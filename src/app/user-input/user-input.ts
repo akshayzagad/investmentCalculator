@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
+import { form } from '@angular/forms/signals';
 export interface InvestmentResult {
   year: number;
   investedValue: number;
@@ -47,8 +48,9 @@ export class UserInput {
     return result;
   }
 
-  onSubmit() {
+  onSubmit(form: NgForm) {
     this.calculation.emit(this.calculateInvestmentResults());
+    form.resetForm();
   }
 
   // Use the below code as a help

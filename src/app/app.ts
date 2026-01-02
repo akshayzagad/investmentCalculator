@@ -15,6 +15,7 @@ import { CommonModule } from '@angular/common';
 export class App {
   protected readonly title = signal('investmentCalculator');
   results: InvestmentResult[] = [];
+  showResult:boolean=false;
 
   /** Here we write below method because
  * ✔ Components are siblings
@@ -30,5 +31,6 @@ Angular enforces one-way data flow
   // Called when UserInput emits calculation
   onCalculation(calculation: InvestmentResult[]) {
     this.results = calculation; // pass this to ResultComponent
+    this.showResult=true;
   }
 }

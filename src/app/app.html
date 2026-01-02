@@ -1,5 +1,5 @@
 <div class="container">
   <app-header></app-header>
   <app-user-input (calculation)="onCalculation($event)"></app-user-input>
-  <app-result *ngIf="results?.length" [calculation]="results"></app-result>
+  <app-result *ngIf="showResult" [calculation]="results"></app-result>
 </div>

@@ -1,7 +1,7 @@
 <div class="row m-3">
   <div class="col-md-3"></div>
   <div class="col-md-6 position">
-    <form (ngSubmit)="onSubmit()">
+    <form #investmentForm="ngForm" (ngSubmit)="onSubmit()">
       <div class="row">
         <div class="col-md-6 py-2">
           <label for="initialInvestment"> Initial Investment </label>
