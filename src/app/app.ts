@@ -23,9 +23,7 @@ export class App {
 ✔ You want predictable, clean architecture
 Child → Parent → Another Child
 UserInputComponent and ResultComponent are siblings
-
 Sibling components cannot talk directly
-
 Angular enforces one-way data flow
  */
 
