@@ -1,0 +1,53 @@
+<div class="row m-3">
+  <div class="col-md-3"></div>
+  <div class="col-md-6 position">
+    <form (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col-md-6 py-2">
+          <label for="initialInvestment"> Initial Investment </label>
+          <input
+            class="form-control"
+            id="initialInvestment"
+            name="initialInvestment"
+            type="number"
+            [(ngModel)]="initialInvestment"
+          />
+        </div>
+        <div class="col-md-6 py-2">
+          <label for="annualInvestment"> Anual Investment </label>
+          <input
+            class="form-control"
+            id="annualInvestment"
+            name="annualInvestment"
+            type="number"
+            [(ngModel)]="annualInvestment"
+          />
+        </div>
+        <div class="col-md-6 py-2">
+          <label for="interest"> Expected Return </label>
+          <input
+            id="interest"
+            class="form-control"
+            type="number"
+            name="interest"
+            [(ngModel)]="interest"
+          />
+        </div>
+        <div class="col-md-6 py-2">
+          <label for="duration"> Duration </label>
+          <input
+            class="form-control"
+            id="duration"
+            type="number"
+            name="duration"
+            [(ngModel)]="duration"
+          />
+        </div>
+        <div>
+          <button type="submit" class="col-md-12 btn btn-primary mt-4">Calculate</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="col-md-3"></div>
+</div>
